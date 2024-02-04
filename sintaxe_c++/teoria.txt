@@ -1,0 +1,7 @@
+Os parâmetros das funções podem ser passados por valor ou por referência:
+
+Valor:
+    a função recebe uma cópia da variável fornecida quando invocada. Alterações dentro da função não afetarão os valores originais.
+
+Referência: 
+    a função recebe uma referência às variáveis, e não uma cópia. Alterações realizadas dentro da função irão alterar os valores contidos nas variáveis originais.

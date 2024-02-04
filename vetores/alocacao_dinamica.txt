@@ -1,0 +1,41 @@
+• Os vetores declarados até aqui eram estáticos, pois o número de elementos era fixado em tempo de compilação.
+
+• Podemos declarar vetores em que o número de elementos é conhecido apenas durante a execução com alocação dinâmica.
+
+• O tamanho do vetor não poderá mudar após a declaração, em alocação estática.
+
+• Para fazer a alocação dinâmica, usaremos o operador new que já conhecemos:
+    int* c = new int[num_element];
+
+• O comando alocará uma região de memória de tamanho suficiente para alocar num_elem elementos inteiros contíguos.
+
+• Em outras palavras, o comando cria num_elem elementos inteiros consecutivos (um vetor).
+
+• A variável c recebe o endereço do primeiro elemento do vetor. Feito isso, podemos usar a sintaxe de colchetes.
+    c[5] = 30;
+    c[7] = 40;
+    c[8] = 50;
+
+• O tamanho do vetor pode mudar em diferentes execuções, em alocará dinâmica:
+    int main() {
+        int num_elem;
+        std::cout << "Digite o tamanho do vetor: ";
+        std::cin >> num_elem;
+
+        int* c = new int[num_elem];
+
+        for (int i=0; i < num_elem; i++) {
+            c[i] = i*2;
+        }
+
+        for (int i=0; i < num_elem; i++) {
+            std:cout << "c[" << i << "] = " << c[i] << "\n";
+        }
+        return 0;
+    }
+
+• Como a alocação foi feita de forma dinâmica com new, precisamos desalocar a memória com o comando delete.
+
+int* c = new int[num_elem];
+
+delete [] c;

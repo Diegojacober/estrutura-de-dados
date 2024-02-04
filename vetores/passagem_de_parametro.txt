@@ -1,0 +1,58 @@
+• No comando a seguir:
+    int c[10];
+
+    •  A variável c armazena o endereço base do vetor.
+    • Nesse caso, c é um ponteiro.
+
+• O mesmo ocorre na alocação dinâmica:
+    int* c = new int[num_elem];
+
+• Quando passamos um vetor para uma função, estamos passando um ponteiro.
+
+• Vamos discutir a passagem de ponteiros:
+    void valor_alocando_memoria(int* p) {
+        p = new int;
+        *p = 7;
+    }
+    void valor_modificando_memoria(int *p) {
+        *p = 8;
+    }
+    void referencia(int*& p) {
+        p = new int;
+        *p = 9;
+    }
+
+• Vamos discutir a passagem de ponteiros:
+
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int* p1 = &a;
+    int* p2 = &b;
+    int* p3 = &c;
+
+    cout << "Antes: " << p1 << " " << p2 << " " << p3 << endl;
+    cout << "Antes: " << *p1 << " " << *p2 << " " << *p3 << endl;
+    cout endl;
+
+    valor_alocando_memoria(p1);
+    valor_modificando_memoria(p2);
+    referencia(p3);
+
+• Após a invocação, imprimimos na tela os valores das variáveis novamente.
+    cout << "Depois: " << p1 << " " << p2 << " " << p3 << endl;
+    cout << "Depois: " << *p1 << " " << *p2 << " " << *p3 << endl;
+    cout << "Depois: " << a << " " << b << " " << c << endl;
+
+• Como conclusão do experimento:
+    • A função valor_alocando_memoria não altera o valor da variável que estava fora da função.
+    • A função também não modifica o endereço para o qual o ponteiro de fora da função estava apontando.
+    • Isso pode ser explicado porque o parâmetro foi passado por valor. Nada do que foi feito internamente afeta as variáveis de fora.
+
+    • A função valor_modificando_memoria altera o valor da variável que estava fora da função.
+    • A passagem de parâmetro foi por valor, mas estamos modificando o endereço de memória para onde o ponteiro aponta.
+    • A variável b usava essa região de memória e a variável p2 apontava para ela. Nesse caso, ambas foram afetadas.
+
+    • A função referencia altera o endereço para onde aponta a variável p3, pois essa foi passada como referência.
+    • A variável c não é afetada, pois continua utilizando o endereço antigo de memória.
+    • Nesse caso, o valor apontado por p3 se torna diferente do valor da variável c.

@@ -1,0 +1,46 @@
+Alocação estatica: feito em compilação;
+Alocação dinâmica: feito em execução;
+
+• Temos um ponteiro e queremos acessar o valor que está na memória. Nesse caso, usamos o operador * como um prefixo para o nome da variável
+
+• O operador * é um operador unário que retorna o conteúdo da variável localizada no endereço especificado.
+
+• Para obter o conteúdo que está localizado no endereço apontado por intPointer:
+    anotherInt = *intPointer;
+
+• Para alterar o conteúdo que está localizado no endereço apontado por intPointer:
+    *intPointer = 25;
+
+• Um ponteiro com valor 0 (zero), por definição, aponta para o vazio, mas não queremos confundir com o inteiro zero.
+    Nesse caso, usaremos a constante NULL que está no pacote cstddef.
+
+    #include <cstddef>
+    bool* truth = NULL;
+    float* money = NULL;
+
+
+Vamos observar a memória após algumas operações:
+    bool* truth = new bool;
+    *truth = true;
+    float* money = new float;
+    *money = 33.46;
+    float* myMoney = new float;
+
+• Qualquer operação que pode ser aplicada a uma variável do tipo int pode ser aplicada a *intPointer.
+• Qualquer operação que pode ser aplicada a uma variável do tipo float pode ser aplicada a *money.
+• Qualquer operação que pode ser aplicada a uma variável do tipo bool pode ser aplicada a *truth.
+
+• As duas operações a seguir são completamente diferentes.
+• Na primeira, o conteúdo de memória apontado por money é copiado para a região apontada por myMoney.
+• Na segunda, myMoney passa a apontar para a mesma região apontada por money
+
+*myMoney = *money; // 1 é copiado para a região do myMoney
+
+myMoney = money; // 2 apontam para o mesmo local, causando vazamento de memória
+
+Supondo que a segunda operação fosse a sua intenção, evite vazamento de memória com delete.
+delete myMoney;
+myMoney = money;
+
+• Observe que delete não inutiliza a variável ponteiro, apenas libera a região que ela aponta.
+

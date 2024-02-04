@@ -1,0 +1,39 @@
+• Vetores são a maneira mais simples de estruturarmos um conjunto de dados.
+
+• Os elementos devem ser do mesmo tipo.
+
+• O tamanho é fixado na declaração do vetor.
+
+• Elementos ocupam regiões consecutivas de memória.
+
+• Na declaração, informamos o tipo e o número de elementos.
+    int c[10];
+
+• Declarando e inicializando os elementos: 
+    int c[10] = {14, 0, 13};
+
+• Inicializamos os primeiros três elementos.
+• Como não fornecemos valores para todos os elementos, o restante iniciará com zero.
+
+• Os elementos podem ser acessados com a sintaxe de colchetes.
+    c[5] = 30;
+    c[7] = 40;
+    c[8] = 50;
+
+• É comum iterarmos pelos valores com for.
+    for (int i =; i < 10; i++) {
+        std::cout << "c[" << i << "] = " << c[i] << "\n";
+    }
+
+• É tarefa do programador verificar os limites do vetor antes de fazer o acesso
+
+• A construção a seguir é comum:
+    int c[] = {14, 0, 13};
+    • O tamanho do vetor será o tamanho da lista.
+    • Não adotaremos esta notação na disciplina por ser difícil saber a quantidade de elementos.
+
+• Em alguns casos, inicializaremos os elementos com um laço de repetição:
+    int c[10];
+    for (int i =; i < 10; i++) {
+        c[i] = 2*i;
+    }

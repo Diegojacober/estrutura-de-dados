@@ -1,0 +1,48 @@
+Ponteiro:
+    Um ponteiro é uma variável cujo conteúdo é um endereço de memória, não um valor no sentido tradicional
+    Os endereços podem ser a localização na memória de uma variável ou função;
+
+O endereço de uma variável (ou função) é a localização na memória do primeiro byte ocupado por ela
+
+Conhecer o endereço de uma variável permite criar estruturas complexas.
+    Listas Encadeadas são implementadas com um item conhecendo o endereço do item seguinte
+
+A possibilidade de trabalhar diretamente com a memória permite criar programas mais eficientes.
+
+Para declarar um ponteiro, usamos a seguinte sintaxe:
+    tipo *ponteiro
+
+Por exemplo, a seguir declaramos um variável chamada intPointer que aponta para um valor do tipo inteiro.
+    int* intPointer
+
+A pergunta agora é: "Como obter um endereço de memória?"
+• Isso pode ser feito de maneira estática ou dinâmica.
+
+Inicialização de ponteiros:
+    O operador & nos permite obter o endereço de memória de uma variável. Feito isso, podemos inicializar um ponteiro.
+
+    // Declarando variáveis
+    int alpha;
+    int* intPointer;
+
+    // Inicializando ponteiro
+    intPointer = &alpha;
+
+Uma segunda maneira de inicializar ponteiros é com alocação dinâmica, um mecanismo pelo qual um programa aloca e libera memória em tempo de execução //pyhton
+
+Vantagens de alocação dinâmica
+• Elimina a necessidade de definir a priori o tamanho da memória a ser utilizada.
+• É possível aumentar ou diminuir o tamanho da memória utilizada em tempo de execução.
+
+Os operadores new e delete são utilizados para efetuar a alocação e desalocação de memória, respectivamente.
+
+Por exemplo, alocando memória dinamicamente para armazenar um inteiro.
+    int *intPointer;
+    intPointer = new int;
+
+Características da Alocação Dinâmica
+• As variáveis residem em um local diferente das que foram alocadas estaticamente.
+• Uma variável alocada de forma dinâmica com new não possui nome.
+• Essa variável precisa ser acessada indiretamente pelo ponteiro retornado por new
+
+

@@ -1,0 +1,13 @@
+# Ignorar arquivos compilados C++
+*.out
+*.exe
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.dylib
+
+# Ignorar diretórios de compilação
+build/
+bin/
