@@ -1,0 +1,29 @@
+Uma pilha é uma estrutura linear na qual inserções e remoções ocorrem no topo da pilha.
+
+Suponha que duas pessoas estão lavando e enxugando pratos:
+
+• Ao terminar de lavar um prato, alguém colocará no topo da pilha de pratos a serem enxugados.
+
+• Se já tem prato demais, quem lava fará uma pausa.
+
+• Alguém tirará o prato que está no topo da pilha para enxugar e guardar em um lugar adequado.
+
+• Se a pilha estiver vazia, quem enxuga faz uma pausa.
+
+Push = colocar novo item na pilha
+Pop = retirar o item da pilha
+
+Resumindo
+• O primeiro elemento a entrar na estrutura tem que ser o último a sair.
+• O último elemento a entrar tem que ser o primeiro a sair.
+• Comportamento parecido com o botão "desfazer" de qualquer editor de texto.
+• Inserções e remoções ocorrem no topo.
+
+FILO (First in Last Out)
+
+Aplicações da Estrutura:
+
+Uma pilha é uma estrutura bastante útil, principalmente quando precisamos garantir alinhamento de componentes em processos.
+• Chamada de funções na execução de programas.
+• Análise de sintaxe de linguagens de programação.
+• Verificação de alinhamento de parênteses em strings.
