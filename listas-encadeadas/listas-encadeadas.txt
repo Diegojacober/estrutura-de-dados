@@ -1,0 +1,14 @@
+Lista linear em que a ordem lógica dos elementos não é mesma da ordem física. Como
+é uma lista linear, cada elemento tem um sucessor e um predecessor.
+Elementos estão espalhados na memória.
+
+Cada elemento precisa indicar em que endereço o seu sucessor pode ser encontrado de modo a manter a ordem lógica.
+
+Essa organização retira a grande vantagem das Listas Lineares Sequenciais, o acesso em tempo constante a qualquer elemento, dado o índice do elemento.
+
+Como consequência, a busca binária deixa de fazer sentido, dado que não acessamos o elemento do meio de um array em tempo constante.
+
+
+Entretanto, esta nova estrutura possui vantagens.
+• Número de elementos pode aumentar ou diminuir durante a execução do programa.
+• A manutenção da ordem lógica não exigirá deslocamento de elementos.

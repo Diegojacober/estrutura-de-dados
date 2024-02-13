@@ -1,1 +1,2 @@
 g++ time.cpp time_main.cpp -o time
+ou g++ *.cpp e executar o ./a.out
