@@ -1,0 +1,18 @@
+typedef char ItemType;
+/*
+ Estrutura usada para guardar 
+ a informação e o endereço do 
+ próximo elemento.
+*/
+struct NodeType
+{
+  ItemType info;
+  NodeType* next;
+};
+
+
+Com essa estrutura é possível iniciar o encadeamento.
+
+Note que basta armazenarmos um único ponteiro, aquele que aponta para o início da estrutura.
+
+Como todas as operações ocorrem na cabeça da pilha, conseguiremos efetuar em tempo constante.
