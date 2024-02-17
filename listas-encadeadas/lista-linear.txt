@@ -1,4 +1,4 @@
-Estrutura de dados na qual cada elemento éprecedido por um elemento e sucedido por outro, com exceção do primeiro que não tem predecessor e do último que não tem sucessor.
+Estrutura de dados na qual cada elemento é precedido por um elemento e sucedido por outro, com exceção do primeiro que não tem predecessor e do último que não tem sucessor.
 Isso gera uma ordem nos elementos, que pode ser a ordem de inclusão.
 
 As estruturas Pilha e Fila são listas lineares.
